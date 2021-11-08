@@ -37,6 +37,12 @@ export function Register() {
                 toast.error(data.message)
                 :
                 toast.success(data.message)
+
+                setName('')
+                setEmail('')
+                setCpf('')
+                setPhone_number('')
+                setSkills([])
         })
     }
     

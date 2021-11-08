@@ -94,7 +94,13 @@ export function Validate(props) {
 
                         <div className={styles.employeeInfo}>
                             <span>Celular</span>
-                            <p>{employee[0]?.phone_number}</p>
+                            <p>{employee[0]?.phone_number || 'Não informado'}</p>
+                        </div>
+                        <hr className={styles.divider} />
+
+                        <div className={styles.employeeInfo}>
+                            <span>Habilidades</span>
+                            <p>{employee[0].skills.toString().replaceAll(',', ', ')}</p>
                         </div>
                         <hr className={styles.divider} />
 
