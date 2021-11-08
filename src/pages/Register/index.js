@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-
 import styles from './styles.module.scss'
 
-import logo from '../../assets/logo.svg'
 import { Header } from '../../components/Header'
+
+import { formatCPF, formatPhone_number } from '../../scripts/masks'
 
 export function Register() {
     const [name, setName] = useState('')
@@ -16,24 +16,25 @@ export function Register() {
     async function handleSubmitForm(event) {
         event.preventDefault()
 
-        // const data = {
-        //     name: name,
-        //     email: email,
-        //     cpf: cpf,
-        //     phone_number: phone_number,
-        // }
+        const data = {
+            name: name,
+            email: email,
+            cpf: cpf,
+            phone_number: phone_number,
+            skills: JSON.stringify(skills)
+        }
 
-        // await fetch('http://localhost:3333/employee', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // }).then(response => response.json())
-        // .then(data => {
-        //     console.log(data)
-        //     setMessage(data.message)
-        // })
+        await fetch('http://localhost:3333/employee', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            setMessage(data.message)
+        })
     }
     
     function handleCheckboxChange(event) {
@@ -60,7 +61,9 @@ export function Register() {
                     <label htmlFor="name">Nome completo *</label>
                     <input
                         type="text"
+                        required
                         name="name" id="name"
+                        value={name}
                         placeholder="Digite seu nome"
                         onChange={event => setName(event.target.value)}
                     />
@@ -70,8 +73,10 @@ export function Register() {
                     <label htmlFor="email">Email *</label>
                     <input
                         type="email"
+                        required
                         name="email"
                         id="email"
+                        value={email}
                         placeholder="email@example.com"
                         onChange={event => setEmail(event.target.value)}
                     />
@@ -81,10 +86,14 @@ export function Register() {
                     <label htmlFor="cpf">CPF *</label>
                     <input
                         type="text"
+                        required
                         name="cpf"
                         id="cpf"
                         placeholder="000.000.000-00"
-                        onChange={event => setCpf(event.target.value)}/>
+                        onChange={event => setCpf(formatCPF(event.target.value))}
+                        value={cpf}
+                        maxLength={14}
+                    />
                 </div>
 
                 <div className={styles.input}>
@@ -94,7 +103,9 @@ export function Register() {
                         name="phone_number"
                         id="phone_number"
                         placeholder="(xx) xxxxx-xxxx"
-                        onChange={event => setPhone_number(event.target.value)}
+                        value={phone_number}
+                        onChange={event => setPhone_number(formatPhone_number(event.target.value))}
+                        maxLength={15}
                     />
                 </div>
 

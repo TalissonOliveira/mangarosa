@@ -24,30 +24,30 @@ export function Records(props) {
             <Header>
                 <h1>Todos os registros de funcionários</h1>
             </Header>
-            <table className={styles.table}>
-                <thead className={styles.tableHead}>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>CPF</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody className={styles.tableBody}>
-                    {employees.length > 0 ?
-                        employees.map(employee => (
-                            <tr onClick={() => props.history.push(`/${employee.cpf}/validar`)}>
+            {employees.length > 0 ?
+                <table className={styles.table}>
+                    <thead className={styles.tableHead}>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody className={styles.tableBody}>
+                        {employees.map(employee => (
+                            <tr key={employee.id} onClick={() => props.history.push(`/${employee.cpf}/validar`)}>
                                 <td>{employee.id}</td>
                                 <td>{employee.name}</td>
                                 <td>{employee.cpf}</td>
                                 <td>{employee.valid ? 'Válido' : 'Não válido'}</td>
                             </tr>
-                        ))
-                        :
-                        <p>Nada por aqui</p>
-                    }
-                </tbody>
-            </table>
+                        ))}
+                    </tbody>
+                </table>
+                :
+                <p>Nada por aqui</p>
+            }
         </main>
     )
 }
