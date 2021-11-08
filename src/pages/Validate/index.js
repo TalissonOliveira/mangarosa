@@ -56,7 +56,7 @@ export function Validate(props) {
             <Header>
                 <div>
                     <h1>Dados do funcionário</h1>
-                    <a onClick={() => props.history.goBack()}>Voltar</a>
+                    <button onClick={() => props.history.goBack()}>Voltar</button>
                 </div>
             </Header>
             {employee.length > 0 ?
