@@ -1,70 +1,57 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+  <img width="150px" src="https://ik.imagekit.io/imagens/logo_WHJPeU5c7t.svg" alt="MangaRosa" />
+</h1>
 
-## Available Scripts
+<p align="center">
+    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/TalissonOliveira/mangarosa?style=flat-square">
 
-In the project directory, you can run:
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/TalissonOliveira/mangarosa?style=flat-square">
 
-### `yarn start`
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/TalissonOliveira/mangarosa?style=flat-square">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    <img alt="GitHub" src="https://img.shields.io/github/license/TalissonOliveira/mangarosa?style=flat-square">
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p align="center">
+    <a href="#book-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#information_source-como-utilizar">Como utilizar</a>
+</p>
 
-### `yarn test`
+<p align="center">
+    <img alt="Preview" src="https://ik.imagekit.io/imagens/mangarosa_MXup4H72F.png">
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :book: Sobre
+Aplicação para cadastro e gerenciamento de funcionários.
 
-### `yarn build`
+## :rocket: Tecnologias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [React.js](https://pt-br.reactjs.org/)
+- [Sass](https://sass-lang.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :information_source: Como utilizar
+Primeiro acesse [api-mangarosa](https://github.com/TalissonOliveira/api-mangarosa) e siga as instruções para clonar e executar a API.
 
-### `yarn eject`
+Na linha de comando:
+```bash
+# Clonar o repositório
+$ git clone https://github.com/TalissonOliveira/mangarosa.git
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Entrar no diretório
+$ cd mangarosa
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Baixar as dependências
+$ yarn install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Executar o servidor
+$ yarn start
+```
+Feito isso, abra o seu navegador e acesse http://localhost:3000/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feito com :heart: por Talisson Oliveira

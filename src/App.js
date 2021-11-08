@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom"
+
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from "react-toastify"
+import { Register } from './pages/Register/'
+import { Records } from './pages/Records/'
+import { Validate } from './pages/Validate/'
+import { Home } from './pages/Home/'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/registrar" component={Register} />
+        <Route path="/:cpf/registrar" component={Register} />
+        <Route path="/:cpf/validar" component={Validate} />
+        <Route path="/registros" component={Records} />
+      </Switch>
+      <ToastContainer />
+    </Router>
+  )
 }
 
-export default App;
+export default App
