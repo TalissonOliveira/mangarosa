@@ -4,13 +4,13 @@
 </h1>
 
 <p align="center">
-    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/TalissonOliveira/mangarosa?style=flat-square">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/TalissonOliveira/mangarosa?style=flat-square">
 
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/TalissonOliveira/mangarosa?style=flat-square">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/TalissonOliveira/mangarosa?style=flat-square">
 
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/TalissonOliveira/mangarosa?style=flat-square">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/TalissonOliveira/mangarosa?style=flat-square">
 
-    <img alt="GitHub" src="https://img.shields.io/github/license/TalissonOliveira/mangarosa?style=flat-square">
+<img alt="GitHub" src="https://img.shields.io/github/license/TalissonOliveira/mangarosa?style=flat-square">
 </p>
 
 <p align="center">
