@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 13rem;
+        margin-bottom: 3rem;
+        align-self: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+}

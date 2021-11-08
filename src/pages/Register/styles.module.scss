@@ -16,6 +16,7 @@
 .form {
     background: #ffffff;
 
+    max-width: 50rem;
     border-radius: .5rem;
     padding: 3rem 5rem;
 
@@ -30,6 +31,14 @@
         height: 6rem;
         margin-bottom: 2rem;
         font-size: 1.4rem;
+    }
+
+    .message {
+        width: 100%;
+        display: inline-block;
+        font-size: 1.6rem;
+        text-align: center;
+        margin-top: 2rem;
     }
 }
 
@@ -68,6 +77,35 @@
 
     & + .input {
         margin-top: 2rem;
+    }
+}
+
+.checkboxGroup {
+    margin-top: 2rem;
+
+    span {
+        display: inline-block;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.checkbox {
+    display: flex;
+
+    input {
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1rem;
+    }
+
+    label {
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+
+    & + .checkbox {
+        margin-top: 1rem;
     }
 }
 
