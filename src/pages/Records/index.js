@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { toast } from 'react-toastify'
 import { Header } from '../../components/Header'
 import styles from './styles.module.scss'
 
@@ -16,7 +17,10 @@ export function Records(props) {
         fetch('http://localhost:3333/employee', options)
             .then(response => response.json())
             .then(data => setEmployees(data))
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error)
+                toast.error('Erro ao buscar os dados.')
+            })
     }, [])
 
     return (

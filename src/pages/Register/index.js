@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from './styles.module.scss'
 
 import { Header } from '../../components/Header'
 
 import { formatCPF, formatPhone_number } from '../../scripts/masks'
+import { toast } from 'react-toastify'
 
 export function Register() {
     const [name, setName] = useState('')
@@ -11,7 +12,6 @@ export function Register() {
     const [cpf, setCpf] = useState('')
     const [phone_number, setPhone_number] = useState('')
     const [skills, setSkills] = useState([])
-    const [message, setMessage] = useState('')
 
     async function handleSubmitForm(event) {
         event.preventDefault()
@@ -33,7 +33,10 @@ export function Register() {
         })
         .then(response => response.json())
         .then(data => {
-            setMessage(data.message)
+            data.type === 'Error' ? 
+                toast.error(data.message)
+                :
+                toast.success(data.message)
         })
     }
     
@@ -42,11 +45,6 @@ export function Register() {
             setSkills(prevState => [...prevState, event.target.value])
         }
     }
-
-    useEffect(() => {
-        console.log(skills)
-
-    }, [skills])
 
     return (
         <main className={styles.container}>
@@ -187,10 +185,7 @@ export function Register() {
                         />
                         <label htmlFor="typescript">TypeScript</label>
                     </div>
-
                 </div>
-
-                <span className={styles.message}>{message}</span>
 
                 <button className={styles.button} type="submit">Enviar dados</button>
             </form>

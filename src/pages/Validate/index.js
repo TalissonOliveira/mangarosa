@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Header } from '../../components/Header'
 import { useParams } from 'react-router-dom'
 import styles from './styles.module.scss'
+import { toast } from 'react-toastify'
 
 export function Validate(props) {
     const [employee, setEmployee] = useState([])
@@ -18,7 +19,10 @@ export function Validate(props) {
         fetch(`http://localhost:3333/employee/${cpf}`, options)
             .then(response => response.json())
             .then(data => setEmployee(data))
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error)
+                toast.success('Error ao buscar os dados.')
+            })
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -31,6 +35,7 @@ export function Validate(props) {
         }
 
         await fetch(`http://localhost:3333/employee/${cpf}`, options)
+        toast.success('Funcionário deletado com sucesso!')
         props.history.push('/registros')
     }
 
@@ -48,6 +53,7 @@ export function Validate(props) {
         }
 
         await fetch(`http://localhost:3333/employee/${cpf}`, options)
+        toast.success('Dados do funcionário alterados com sucesso!')
         props.history.push('/registros')
     }
 
