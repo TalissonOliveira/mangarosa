@@ -36,7 +36,7 @@ export function Records(props) {
                 <tbody className={styles.tableBody}>
                     {employees.length > 0 ?
                         employees.map(employee => (
-                            <tr>
+                            <tr onClick={() => props.history.push(`/${employee.cpf}/validar`)}>
                                 <td>{employee.id}</td>
                                 <td>{employee.name}</td>
                                 <td>{employee.cpf}</td>
